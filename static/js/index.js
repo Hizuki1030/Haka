@@ -19,7 +19,7 @@ window.onload = function(){
 
     canvas.renderAll();
     Haka_init()
-    const se1 = new Audio('static/Onmtp-Ding05-1.mp3');
+    const se1 = new Audio('https://drive.google.com/uc?id=1Ktle8PeKugV79ov5ZWuYDyzxZ407Zudz');
     [...document.getElementsByClassName('ti-n_button')].forEach(bt=>{
     bt.addEventListener('mousedown',()=>{
     se1.pause();
