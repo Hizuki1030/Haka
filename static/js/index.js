@@ -21,7 +21,7 @@ window.onload = function(){
     Haka_init()
 
     
-  const se1 = new Audio('static/music/Onmtp-Ding05-1.mp3');
+  const se1 = new Audio('static/Onmtp-Ding05-1.mp3');
 
   [...document.getElementsByClassName('ti-n_button')].forEach(bt=>{
     bt.addEventListener('mousedown',()=>{
