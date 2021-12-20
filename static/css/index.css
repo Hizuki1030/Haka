@@ -35,12 +35,21 @@ padding:0;
 
 .senkou_button{
   border-radius:30px;
-  width: 50%;
+  width: 40%;
   height: 80%;
   margin: auto;
 
   background-color: rgb(220, 220, 220);
 }
+.ti-n_button{
+  border-radius:30px;
+  width: 40%;
+  height: 80%;
+  margin: auto;
+
+  background-color: rgb(220, 220, 220);
+}
+
 
 @media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
   .side_margin{
@@ -50,3 +59,17 @@ padding:0;
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+
+.btn a {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  background: #999;
+  border-radius: 5px;
+  border-bottom: 4px solid #666;
+  color: #FFF;
+  margin: 0 auto;
+}
