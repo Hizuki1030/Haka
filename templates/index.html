@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja"></html>
+<head>
+  <title>UImaker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/index.css') }}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.1.0/fabric.min.js"></script>
+
+  <script type="text/javascript" src="{{ url_for('static', filename='js/haka.js')}}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.8.2/pixi.js" integrity="sha512-IVKvmUpF+cEGUqHZScXGd/M49SV55/JmAW03XmMPFZ9vBwPBRqxvPEvWn6k6iY2ocsK0yNbB0eBdigi8/Si0rQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/index.js')}}"></script>
+
+</head>
+
+<body>
+  <div class = "app">
+    
+    <div class= "Haka">
+      <div class ="side_margin"></div>
+      <canvas id="canvas"></canvas>
+      <div class ="side_margin"></div>
+    </div>
+    <div class ="menu">
+      <div class = "bottom_menu">
+        <button type="button" onclick = "addSenkou();" class="senkou_button">線香を上げる</button>
+      </div>
+  </div>      
+  </div>
+</body>
+
+</html>
