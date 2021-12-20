@@ -79,6 +79,8 @@ function Haka_init(){
   storne_top.selectable = false;
   storne_bottom.selectable = false;
   text.hasControls = false;
+  storne_shelf.selectable = false;
+  storne_shelf_center.selectable = false;
 
   canvas.add(storne_top,storne_bottom,text,storne_shelf,storne_shelf_center)
 
@@ -87,7 +89,7 @@ function Haka_init(){
 
 function addSenkou(){
     fabric.Image.fromURL('/static/pic/incense.png', function(oImg) {
-        scale = canvasWidth/2880; 
+        scale = canvasHeight/3500; 
         oImg.scale(scale);
         oImg.top =(canvasHeight/2 - storne_bottom_height/2 + storne_top_height/2 - oImg.height*scale);			//上
         oImg.left = canvasWidth *0.55;
