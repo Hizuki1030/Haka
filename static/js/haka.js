@@ -11,7 +11,7 @@ var storne_shelf_center_width = storne_shelf_width*0.8;
 var storne_shelf_center_height = storne_shelf_height;
 
 var Name ="饗\n庭\n　\n陽\n月"
-function Haka_init(){
+function Haka_init(userName){
   var storne_top = new fabric.Rect({
     left: canvasWidth/2 - storne_top_width/2,			//左
     top: canvasHeight/2 - storne_top_height/2,			//上
@@ -46,7 +46,8 @@ function Haka_init(){
     fontFamily: 'Hina+Mincho',
     type:"components_text",
     });
-  text.text = Name;  
+  userName = addstr(userName,"\n")
+  text.text = userName;  
 
   var storne_shelf = new fabric.Rect({
     left: canvasWidth/2 - storne_shelf_width/2,			//左
@@ -101,3 +102,11 @@ function addSenkou(){
 }
 
 
+function addstr(result,tag){
+  let newResult = "";
+  for(let i = 0; i < result.length; i++){
+    console.log(result[i])
+    newResult +=  result[i] + tag;
+  }
+  return newResult
+}
