@@ -34,16 +34,28 @@ window.onload = function(){
 
 }
 
-
+var HTML_URLcopy='<div class="URL_input">'+
+            '<input id="URL_text"></input>'+
+            '<button class="copyURL"  onclick="copytoclipbox()" >コピー</button>'+        
+            '</div>'
 
 
 function generateURL(){
     var name = document.getElementById("Name").value;
-    var URL_box = document.getElementById("URL_text");
+
     var URL_str = "https://web-haka.herokuapp.com/Haka?name="
     //var URL_str = "http://192.168.0.3:5000/Haka?name="
 
+
     URL_str =URL_str +name
+    var qrtext = URL_str;
+      var utf8qrtext = unescape(encodeURIComponent(qrtext));
+    $("#qrcode").html("");
+    $("#qrcode").qrcode({text:utf8qrtext});
+    
+    let element = document.getElementById('copyURL');
+    element.insertAdjacentHTML('beforebegin', HTML_URLcopy);
+    var URL_box = document.getElementById("URL_text");
     URL_box.value = URL_str
 }
 
@@ -91,3 +103,6 @@ function copyTextToClipboard(textVal){
     // 処理結果を返却
     return retVal;
   }
+
+
+  

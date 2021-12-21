@@ -1,0 +1,95 @@
+@media screen and (min-width: 767px) { /*ウィンドウ幅が767px以上の場合に適用*/
+    .side_margin{
+      background-color: rgb(255, 255, 255);
+      width: 25%;
+      height: 100%;
+    }
+  }
+
+html {
+    height: 100%;
+    width: 100%;
+  }
+
+body {
+height: 100%;
+width: 100%;
+margin:0;
+padding:0;
+display: flex;
+}
+
+.main{
+  height: 100%;
+  width: 100%;
+  display: block;
+
+}
+
+.logo{
+  width: 100%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name_input{
+    width: 100%;
+    height: 20%;
+    display: block;
+}
+.URL_input{
+    width: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto; 
+}
+#Name{
+    display: flex;
+    width: 80%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.generateHaka{
+    display: block;
+    width: 30%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 2%;
+    margin-bottom: 2%;
+    text-align: center;
+    
+
+    border-radius: 50vh;
+    
+}
+
+
+
+
+.copyURL{
+    width: 20%;
+    height: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: auto;
+    margin-left: 5%;
+    border-radius: 100vh;
+    
+}
+
+#URL_text{
+    width: 60%;
+    margin-left: auto;
+
+}
+
+#qrcode canvas{
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right:auto ;
+}

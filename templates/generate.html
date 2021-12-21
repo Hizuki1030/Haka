@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="Shift-Jis">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js')}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/generate.css') }}">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js" integrity="sha512-NFUcDlm4V+a2sjPX7gREIXgCSFja9cHtKPOL1zj6QhnE0vcY695MODehqkaGYTLyL2wxe/wtr4Z49SvqXq12UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js')}}"></script>
 
-    <title>Document</title>
+    <title>Haka</title>
 </head>
 <body>
-    <h1>Web-Haka</h1>
-    <input id = "Name"></input><button class="generateHaka"  onclick="generateURL()" >作成</button>
-    <input id="URL_text"></input><button class="generateHaka"  onclick="copytoclipbox()" >コピー</button>
+    <div class ="side_margin"></div>
+    <div class="main">
+        <img class="logo" src="static/pic/haka_logo.png"> 
+        <div class="name_input">
+            <input id = "Name"></input>
+            <button class="generateHaka"  onclick="generateURL()" >作成</button>    
+        </div>
+        <div id="qrcode"></div>
+        <br>
+        <div id="copyURL">
+    </div>
+    <div class ="side_margin"></div>
 </body>
 </html>
