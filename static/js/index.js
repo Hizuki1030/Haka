@@ -40,8 +40,8 @@ window.onload = function(){
 function generateURL(){
     var name = document.getElementById("Name").value;
     var URL_box = document.getElementById("URL_text");
-    //var URL_str = "https://web-haka.herokuapp.com/Haka?name="
-    var URL_str = "http://192.168.0.3:5000/Haka?name="
+    var URL_str = "https://web-haka.herokuapp.com/Haka?name="
+    //var URL_str = "http://192.168.0.3:5000/Haka?name="
 
     URL_str =URL_str +name
     URL_box.value = URL_str
