@@ -11,6 +11,16 @@ var stone_shelf_center_width = stone_shelf_width*0.8;
 var stone_shelf_center_height = stone_shelf_height;
 
 var Name ="饗\n庭\n　\n陽\n月"
+
+function addstr(result,tag){
+  let newResult = "";
+  for(let i = 0; i < result.length; i++){
+    console.log(result[i])
+    newResult +=  result[i] + tag;
+  }
+  return newResult
+}
+
 function Haka_init(userName){
   var stone_top = new fabric.Rect({
     left: canvasWidth/2 - stone_top_width/2,			//左
@@ -89,7 +99,7 @@ function Haka_init(userName){
 }
 
 function addSenkou(){
-    fabric.Image.fromURL('/static/pic/incense.png', function(oImg) {
+    fabric.Image.fromURL('pic/incense.png', function(oImg) {
         scale = canvasHeight/3500; 
         oImg.scale(scale);
         oImg.top =(canvasHeight/2 - stone_bottom_height/2 + stone_top_height/2 - oImg.height*scale);			//上
@@ -102,11 +112,3 @@ function addSenkou(){
 }
 
 
-function addstr(result,tag){
-  let newResult = "";
-  for(let i = 0; i < result.length; i++){
-    console.log(result[i])
-    newResult +=  result[i] + tag;
-  }
-  return newResult
-}
