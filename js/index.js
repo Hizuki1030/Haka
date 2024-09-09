@@ -23,7 +23,7 @@ window.onload = function(){
     queries = getUrlQueries();
     userName = queries["name"]
     Haka_init(userName)
-    const se1 = new Audio('https://drive.google.com/uc?id=1Ktle8PeKugV79ov5ZWuYDyzxZ407Zudz');
+    const se1 = new Audio('sound/rin.mp3');
     [...document.getElementsByClassName('ti-n_button')].forEach(bt=>{
     bt.addEventListener('mousedown',()=>{
     se1.pause();
