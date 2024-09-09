@@ -7,22 +7,63 @@
     <link rel="stylesheet" type="text/css" href="css/generate.css">
     <script type="text/javascript" src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js" integrity="sha512-NFUcDlm4V+a2sjPX7gREIXgCSFja9cHtKPOL1zj6QhnE0vcY695MODehqkaGYTLyL2wxe/wtr4Z49SvqXq12UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js')}}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js" integrity="sha512-NFUcDlm4V+a2sjPX7gREIXgCSFja9cHtKPOL1zj6QhnE0vcY695MODehqkaGYTLyL2wxe/wtr4Z49SvqXq12UQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/index.js')}}"></script>
     <title>Haka</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .logo {
+            max-width: 100%;
+            height: auto; /* 比率を保つ */
+            max-height: 200px; /* 高さの上限を設定 */
+        }
+        .name_input {
+            margin: 20px 0;
+        }
+        #Name {
+            padding: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+            max-width: 300px; /* 入力フィールドの最大幅を制限 */
+        }
+        .generateHaka {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #qrcode {
+            margin-top: 20px;
+            max-width: 300px; /* QRコードの最大幅を制限 */
+        }
+        #copyURL {
+            margin-top: 20px;
+            max-width: 300px; /* コピーURLの最大幅を制限 */
+            overflow: hidden;
+            text-overflow: ellipsis; /* URLが長い場合は省略記号を表示 */
+            white-space: nowrap; /* テキストの折り返しを防止 */
+        }
+    </style>
 </head>
 <body>
-    <div class ="side_margin"></div>
     <div class="main">
-        <img class="logo" src="pic/haka_logo.png"> 
         <div class="name_input">
-            <input id = "Name"></input>
-            <button class="generateHaka"  onclick="generateURL()" >作成</button>    
+            <label for="Name">名前を入力して墓を作成:</label>
+            <input id="Name" type="text">
+            <button class="generateHaka" onclick="generateURL()">作成</button>    
         </div>
         <div id="qrcode"></div>
-        <br>
-        <div id="copyURL">
+        <div id="copyURL"></div>
     </div>
-    <div class ="side_margin"></div>
 </body>
 </html>

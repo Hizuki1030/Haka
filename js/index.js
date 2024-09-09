@@ -43,8 +43,7 @@ var HTML_URLcopy='<div class="URL_input">'+
 function generateURL(){
     var name = document.getElementById("Name").value;
 
-    var URL_str = "https://web-haka.herokuapp.com/Haka?name="
-    //var URL_str = "http://192.168.0.3:5000/Haka?name="
+    var URL_str = "https://hizuki1030.github.io/Haka?name="
 
 
     URL_str =URL_str +name
